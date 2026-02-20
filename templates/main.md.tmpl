@@ -1,0 +1,13 @@
+{{- define "main" -}}
+{{ template "frontmatter" . }}
+
+----
+
+{{ template "reviews" . }}
+
+{{ template "directory" . }}
+
+----
+
+{{ template "articles" . }}
+{{- end -}}

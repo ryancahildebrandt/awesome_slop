@@ -1,0 +1,7 @@
+{{- define "articles" -}}
+## Articles
+{{ range . }}
+- <a name="{{.Id}}">[{{.Id}}]</a> [{{.Title}}]({{.Url}})
+	- {{.Abstract}}
+{{- end -}}
+{{- end -}}

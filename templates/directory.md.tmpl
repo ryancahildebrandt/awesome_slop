@@ -1,0 +1,46 @@
+{{- define "directory" -}}
+## Article Directory
+Roughly grouped by study findings as they relate to common LLM claims
+
+- LLMs are bad for the environment {{ categoryReferences "environment" }}
+- LLMs are bad for you {{ categoryReferences "cognitive" }}
+- LLM narratives exacerbate misuse {{ categoryReferences "narrative" }}
+- LLMs aren't secure {{ categoryReferences "security" }}
+- LLMs aren't interpretable {{ categoryReferences "interpret" }}
+- LLMs are biased
+	- LLMs are biased towards their own outputs {{ categoryReferences "bias.self" }}
+	- LLMs propagate social bias {{ categoryReferences "bias.social" }}
+- LLM evaluations are unreliable
+	- Benchmarks aren't enough {{ categoryReferences "eval.bench" }}
+	- Hallucination detection is unreliable {{ categoryReferences "eval.hallucination" }}
+- LLM task performance is unreliable
+	- LLM outputs are sensitive to input characteristics {{ categoryReferences "performance.input" }}
+	- LLMs do not perform consistently {{ categoryReferences "performance.task" }}
+	- LLM based agents do not perform consistently {{ categoryReferences "performance.agents" }}
+	- LLMs do not utilize context consistently {{ categoryReferences "performance.context" }}
+	- LLMs do not follow instructions consistently {{ categoryReferences "performance.instruct" }}
+	- LLM task performance is not generalizable {{ categoryReferences "performance.general" }}
+- LLMs are non-deterministic:
+	- 0 Temperature does not ensure determinism {{ categoryReferences "determinism.temp" }}
+	- Non-determinism is baked into LLM serving architectures {{ categoryReferences "determinism.serving" }}
+- LLM failures are inherent characteristics, not temporary shortcomings
+	- Hallucinations aren't solvable {{ categoryReferences "inherent.hallucination" }}
+	- LLM systems are limited by their architecture {{ categoryReferences "inherent.architecture" }}
+	- LLMs don't have emergent capabilities {{ categoryReferences "inherent.emergent" }}
+- LLMs can cause harm
+	- LLMs violate ethical standards {{ categoryReferences "harm.ethics" }}
+	- LLM safeguards are unreliable {{ categoryReferences "harm.safeguards" }}
+	- LLMs fail to mitigate harmful user interactions {{ categoryReferences "harm.user" }}
+	- LLMs fail to mitigate harmful outputs {{ categoryReferences "harm.output" }}
+- LLMs are not minds
+	- LLMs do not reason {{ categoryReferences "minds.reason" }}
+	- LLMs do not know {{ categoryReferences "minds.know" }}
+	- LLMs do not plan {{ categoryReferences "minds.plan" }}
+	- LLMs do not research {{ categoryReferences "minds.research" }}
+	- LLMs do not calculate {{ categoryReferences "minds.calculate" }}
+	- LLMs do not have a relationship to fact {{ categoryReferences "minds.fact" }}
+	- LLMs do not stand in for humans {{ categoryReferences "minds.human" }}
+	- LLMs do not show internal consistency {{ categoryReferences "minds.consistency" }}
+	- LLMs do not have consciousness {{ categoryReferences "minds.conscious" }}
+	- LLMs do not have morals {{ categoryReferences "minds.moral" }}
+{{- end -}}
