@@ -1,2 +1,7 @@
 Makefile
 Justfile
+.venv
+clusters.csv
+main.py
+pyproject.toml
+uv.lock
