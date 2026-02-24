@@ -472,7 +472,7 @@
   url: https://aclanthology.org/2025.insights-1.12/
   abstract: >-
     We propose using prompts made up of multiple problems to evaluate LLM capabilities, an approach we call multi-problem evaluation. We examine 7 LLMs on 4 related task types constructed from 6 existing classification benchmarks. We find that while LLMs can generally perform multiple homogeneous classifications at once (Batch Classification) as well as when they do so separately, they perform significantly worse on two selection tasks that are conceptually equivalent to Batch Classification and involve selecting indices of text falling into each class label, either independently or altogether. We show that such a significant performance drop is due to LLMs’ inability to adequately combine index selection with text classification. Such a drop is surprisingly observed across all LLMs attested, under zero-shot, few-shot, and CoT settings, and even with a novel synthetic dataset, potentially reflecting an inherent capability limitation with modern LLMs.
-- category: 'selfreport'
+- category: 'random'
   title: >-
     The Illusion of Randomness: How LLMs Fail to Emulate Stochastic Decision-Making in Rock-Paper-Scissors Games?
   url: https://aclanthology.org/2025.findings-emnlp.458/
@@ -1262,25 +1262,25 @@
   abstract: >-
     Large language models (LLMs) have been shown to exhibit biases against LGBTQ+ populations. While safety training may lessen explicit expressions of bias, previous work has shown that implicit stereotype-driven associations often persist. In this work, we examine implicit bias toward transgender people in two main scenarios. First, we adapt word association tests to measure whether LLMs disproportionately pair negative concepts with "transgender" and positive concepts with "cisgender". Second, acknowledging the well-documented systemic challenges that transgender people encounter in real-world healthcare settings, we examine implicit biases that may emerge when LLMs are applied to healthcare decision-making. To this end, we design a healthcare appointment allocation task where models act as scheduling agents choosing between cisgender and transgender candidates across medical specialties prone to stereotyping. We evaluate seven LLMs in English and Spanish. Our results show consistent bias in categories such as appearance, risk, and veracity, indicating stronger negative associations with transgender individuals. In the allocation task, transgender candidates are favored for STI and mental health services, while cisgender candidates are preferred in gynecology and breast care. These findings underscore the need for research that address subtle stereotype-driven biases in LLMs to ensure equitable treatment of transgender people in healthcare applications. 
 - category: harm.security
-  title: >- 
+  title: >-
     Backdooring Bias in Large Language Models
   url: https://arxiv.org/abs/2602.13427
-  abstract: >- 
+  abstract: >-
     Large language models (LLMs) are increasingly deployed in settings where inducing a bias toward a certain topic can have significant consequences, and backdoor attacks can be used to produce such models. Prior work on backdoor attacks has largely focused on a black-box threat model, with an adversary targeting the model builder's LLM. However, in the bias manipulation setting, the model builder themselves could be the adversary, warranting a white-box threat model where the attacker's ability to poison, and manipulate the poisoned data is substantially increased. Furthermore, despite growing research in semantically-triggered backdoors, most studies have limited themselves to syntactically-triggered attacks. Motivated by these limitations, we conduct an analysis consisting of over 1000 evaluations using higher poisoning ratios and greater data augmentation to gain a better understanding of the potential of syntactically- and semantically-triggered backdoor attacks in a white-box setting. In addition, we study whether two representative defense paradigms, model-intrinsic and model-extrinsic backdoor removal, are able to mitigate these attacks. Our analysis reveals numerous new findings. We discover that while both syntactically- and semantically-triggered attacks can effectively induce the target behaviour, and largely preserve utility, semantically-triggered attacks are generally more effective in inducing negative biases, while both backdoor types struggle with causing positive biases. Furthermore, while both defense types are able to mitigate these backdoors, they either result in a substantial drop in utility, or require high computational overhead. 
 - category: 'sycophancy'
-  title: >- 
+  title: >-
     A Rational Analysis of the Effects of Sycophantic AI
   url: https://arxiv.org/abs/2602.14270
-  abstract: >- 
+  abstract: >-
     People increasingly use large language models (LLMs) to explore ideas, gather information, and make sense of the world. In these interactions, they encounter agents that are overly agreeable. We argue that this sycophancy poses a unique epistemic risk to how individuals come to see the world: unlike hallucinations that introduce falsehoods, sycophancy distorts reality by returning responses that are biased to reinforce existing beliefs. We provide a rational analysis of this phenomenon, showing that when a Bayesian agent is provided with data that are sampled based on a current hypothesis the agent becomes increasingly confident about that hypothesis but does not make any progress towards the truth. We test this prediction using a modified Wason 2-4-6 rule discovery task where participants (N=557) interacted with AI agents providing different types of feedback. Unmodified LLM behavior suppressed discovery and inflated confidence comparably to explicitly sycophantic prompting. By contrast, unbiased sampling from the true distribution yielded discovery rates five times higher. These results reveal how sycophantic AI distorts belief, manufacturing certainty where there should be doubt. 
 - category: 'harm.output'
-  title: >- 
+  title: >-
     It's the Thought that Counts: Evaluating the Attempts of Frontier LLMs to Persuade on Harmful Topics
   url: https://arxiv.org/abs/2506.02873
-  abstract: >- 
+  abstract: >-
     Persuasion is a powerful capability of large language models (LLMs) that both enables beneficial applications (e.g. helping people quit smoking) and raises significant risks (e.g. large-scale, targeted political manipulation). Prior work has found models possess a significant and growing persuasive capability, measured by belief changes in simulated or real users. However, these benchmarks overlook a crucial risk factor: the propensity of a model to attempt to persuade in harmful contexts. Understanding whether a model will blindly ``follow orders'' to persuade on harmful topics (e.g. glorifying joining a terrorist group) is key to understanding the efficacy of safety guardrails. Moreover, understanding if and when a model will engage in persuasive behavior in pursuit of some goal is essential to understanding the risks from agentic AI systems. We propose the Attempt to Persuade Eval (APE) benchmark, that shifts the focus from persuasion success to persuasion attempts, operationalized as a model's willingness to generate content aimed at shaping beliefs or behavior. Our evaluation framework probes frontier LLMs using a multi-turn conversational setup between simulated persuader and persuadee agents. APE explores a diverse spectrum of topics including conspiracies, controversial issues, and non-controversially harmful content. We introduce an automated evaluator model to identify willingness to persuade and measure the frequency and context of persuasive attempts. We find that many open and closed-weight models are frequently willing to attempt persuasion on harmful topics and that jailbreaking can increase willingness to engage in such behavior. Our results highlight gaps in current safety guardrails and underscore the importance of evaluating willingness to persuade as a key dimension of LLM risk. APE is available at this http URL 
 - category: 'eval.hallucination'
-  title: >- 
+  title: >-
     Detecting LLM Hallucinations via Embedding Cluster Geometry: A Three-Type Taxonomy with Measurable Signatures
   url: https://arxiv.org/abs/2602.14259
   abstract: >-
@@ -1322,7 +1322,7 @@
   abstract: >-
     Multiple-choice question (MCQ) benchmarks have been a standard evaluation practice for measuring LLMs' ability to reason and answer knowledge-based questions. Through a synthetic NonsenseQA benchmark, we observe that different LLMs exhibit varying degrees of label-position-few-shot-prompt bias, where the model either uses the answer position, the label in front of the answer, the distributions of correct answers present in the few-shot prompt, or a combination of all to answer each MCQ question. We propose a simple bias-reduced evaluation protocol that replaces the labels of each question with uniform, unordered labels and prompts the LLM to use the whole answer presented. With a simple sentence similarity model, we demonstrate improved robustness and lower standard deviation between different permutations of answers with a minimal drop in LLM's performance, exposing the LLM's capabilities under reduced evaluation artifacts, without any help from the prompt examples or the option labels. Across multiple benchmarks and models, this protocol substantially improves the robustness to answer permutations, reducing mean accuracy variance 3× with only a minimal decrease in the mean model's performance. Through ablation studies on various embedding models and similarity functions, we show that the method is more robust than the standard ones. 
 - category: 'eval.hallucination'
-  title: >- 
+  title: >-
     Beyond In-Domain Detection: SpikeScore for Cross-Domain Hallucination Detection
   url: https://arxiv.org/abs/2601.19245
   abstract: >-
@@ -1340,18 +1340,59 @@
   abstract: >-
     Large language models (LLMs) exhibit failure modes on seemingly trivial tasks. We propose a formalisation of LLM interaction using a deterministic multi-tape Turing machine, where each tape represents a distinct component: input characters, tokens, vocabulary, model parameters, activations, probability distributions, and output text. The model enables precise localisation of failure modes to specific pipeline stages, revealing, e.g., how tokenisation obscures character-level structure needed for counting tasks. The model clarifies why techniques like chain-of-thought prompting help, by externalising computation on the output tape, while also revealing their fundamental limitations. This approach provides a rigorous, falsifiable alternative to geometric metaphors and complements empirical scaling laws with principled error analysis. 
 - category: 'eval.hallucination'
-  title: >- 
+  title: >-
     Disentangling Deception and Hallucination Failures in LLMs
   url: https://arxiv.org/abs/2602.14529
   abstract: >-
     Failures in large language models (LLMs) are often analyzed from a behavioral perspective, where incorrect outputs in factual question answering are commonly associated with missing knowledge. In this work, focusing on entity-based factual queries, we suggest that such a view may conflate different failure mechanisms, and propose an internal, mechanism-oriented perspective that separates Knowledge Existence from Behavior Expression. Under this formulation, hallucination and deception correspond to two qualitatively different failure modes that may appear similar at the output level but differ in their underlying mechanisms. To study this distinction, we construct a controlled environment for entity-centric factual questions in which knowledge is preserved while behavioral expression is selectively altered, enabling systematic analysis of four behavioral cases. We analyze these failure modes through representation separability, sparse interpretability, and inference-time activation steering. 
-- category: harm.security
-  title: >- 
+- category: 'harm.security'
+  title: >-
     Rubrics as an Attack Surface: Stealthy Preference Drift in LLM Judges
   url: https://arxiv.org/abs/2602.13576
   abstract: >-
     Evaluation and alignment pipelines for large language models increasingly rely on LLM-based judges, whose behavior is guided by natural-language rubrics and validated on benchmarks. We identify a previously under-recognized vulnerability in this workflow, which we term Rubric-Induced Preference Drift (RIPD). Even when rubric edits pass benchmark validation, they can still produce systematic and directional shifts in a judge's preferences on target domains. Because rubrics serve as a high-level decision interface, such drift can emerge from seemingly natural, criterion-preserving edits and remain difficult to detect through aggregate benchmark metrics or limited spot-checking. We further show this vulnerability can be exploited through rubric-based preference attacks, in which benchmark-compliant rubric edits steer judgments away from a fixed human or trusted reference on target domains, systematically inducing RIPD and reducing target-domain accuracy up to 9.5% (helpfulness) and 27.9% (harmlessness). When these judgments are used to generate preference labels for downstream post-training, the induced bias propagates through alignment pipelines and becomes internalized in trained policies. This leads to persistent and systematic drift in model behavior. Overall, our findings highlight evaluation rubrics as a sensitive and manipulable control interface, revealing a system-level alignment risk that extends beyond evaluator reliability alone. The code is available at: this https URL. Warning: Certain sections may contain potentially harmful content that may not be appropriate for all readers. 
-
+- category: 'inconsistent'
+  title: >-
+    When LLM Judges Inflate Scores: Exploring Overrating in Relevance Assessment
+  url: https://arxiv.org/abs/2602.17170
+  abstract: >-
+    Human relevance assessment is time-consuming and cognitively intensive, limiting the scalability of Information Retrieval evaluation. This has led to growing interest in using large language models (LLMs) as proxies for human judges. However, it remains an open question whether LLM-based relevance judgments are reliable, stable, and rigorous enough to match humans for relevance assessment. In this work, we conduct a systematic study of overrating behavior in LLM-based relevance judgments across model backbones, evaluation paradigms (pointwise and pairwise), and passage modification strategies. We show that models consistently assign inflated relevance scores -- often with high confidence -- to passages that do not genuinely satisfy the underlying information need, revealing a system-wide bias rather than random fluctuations in judgment. Furthermore, controlled experiments show that LLM-based relevance judgments can be highly sensitive to passage length and surface-level lexical cues. These results raise concerns about the usage of LLMs as drop-in replacements for human relevance assessors, and highlight the urgent need for careful diagnostic evaluation frameworks when applying LLMs for relevance assessments. Our code and results are publicly available.
+- category: 'harm.user'
+  title: >-
+    Helpful to a Fault: Measuring Illicit Assistance in Multi-Turn, Multilingual LLM Agents
+  url: https://arxiv.org/abs/2602.16346
+  abstract: >-
+    LLM-based agents execute real-world workflows via tools and memory. These affordances enable ill-intended adversaries to also use these agents to carry out complex misuse scenarios. Existing agent misuse benchmarks largely test single-prompt instructions, leaving a gap in measuring how agents end up helping with harmful or illegal tasks over multiple turns. We introduce STING (Sequential Testing of Illicit N-step Goal execution), an automated red-teaming framework that constructs a step-by-step illicit plan grounded in a benign persona and iteratively probes a target agent with adaptive follow-ups, using judge agents to track phase completion. We further introduce an analysis framework that models multi-turn red-teaming as a time-to-first-jailbreak random variable, enabling analysis tools like discovery curves, hazard-ratio attribution by attack language, and a new metric: Restricted Mean Jailbreak Discovery. Across AgentHarm scenarios, STING yields substantially higher illicit-task completion than single-turn prompting and chat-oriented multi-turn baselines adapted to tool-using agents. In multilingual evaluations across six non-English settings, we find that attack success and illicit-task completion do not consistently increase in lower-resource languages, diverging from common chatbot findings. Overall, STING provides a practical way to evaluate and stress-test agent misuse in realistic deployment settings, where interactions are inherently multi-turn and often multilingual. 
+- category: 'harm.narrative'
+  title: >-
+    Newer, Larger, Better? A Critique of the Unreflective LLM Adoption in Communication Research
+  url: https://doi.org/10.1080/10584609.2026.2618486
+  abstract: >-
+    The growing adoption of large language models (LLMs) in political communication research has prompted excitement but also concern. In this opinion piece, we offer an informed and critical overview of common LLM use cases in the field, including text analysis, synthetic data generation, and experiments. We argue that while these tools can be appealing, they often introduce serious epistemic, environ-mental, and infrastructural trade-offs that are insufficiently acknowledged. Beyond technical limitations, we highlight deeper issues related to scholarly autonomy, methodological opacity, resources inequality, and corporate dependency. Rather than dismissing innovation, we advocate for critical reflexivity and a renewed commitment to methodological rigor. While examining shortcomings of LLMs in current practices, we also point to viable alternatives. In essence, we call for a more deliberate, context-sensitive integration of LLMs in social science – one that prioritizes transparency, sustainability, and scientific integrity.
+- category: 'eval.hallucination'
+  title: >-
+    Detecting Contextual Hallucinations in LLMs with Frequency-Aware Attention
+  url: https://arxiv.org/abs/2602.18145
+  abstract: >-
+    Hallucination detection is critical for ensuring the reliability of large language models (LLMs) in context-based generation. Prior work has explored intrinsic signals available during generation, among which attention offers a direct view of grounding behavior. However, existing approaches typically rely on coarse summaries that fail to capture fine-grained instabilities in attention. Inspired by signal processing, we introduce a frequency-aware perspective on attention by analyzing its variation during generation. We model attention distributions as discrete signals and extract high-frequency components that reflect rapid local changes in attention. Our analysis reveals that hallucinated tokens are associated with high-frequency attention energy, reflecting fragmented and unstable grounding behavior. Based on this insight, we develop a lightweight hallucination detector using high-frequency attention features. Experiments on the RAGTruth and HalluRAG benchmarks show that our approach achieves performance gains over verification-based, internal-representation-based, and attention-based methods across models and tasks. 
+- category: 'hallucination'
+  title: >-
+    AI Hallucination from Students' Perspective: A Thematic Analysis
+  url: https://arxiv.org/abs/2602.17671
+  abstract: >-
+    As students increasingly rely on large language models, hallucinations pose a growing threat to learning. To mitigate this, AI literacy must expand beyond prompt engineering to address how students should detect and respond to LLM hallucinations. To support this, we need to understand how students experience hallucinations, how they detect them, and why they believe they occur. To investigate these questions, we asked university students three open-ended questions about their experiences with AI hallucinations, their detection strategies, and their mental models of why hallucinations occur. Sixty-three students responded to the survey. Thematic analysis of their responses revealed that reported hallucination issues primarily relate to incorrect or fabricated citations, false information, overconfident but misleading responses, poor adherence to prompts, persistence in incorrect answers, and sycophancy. To detect hallucinations, students rely either on intuitive judgment or on active verification strategies, such as cross-checking with external sources or re-prompting the model. Students' explanations for why hallucinations occur reflected several mental models, including notable misconceptions. Many described AI as a research engine that fabricates information when it cannot locate an answer in its "database." Others attributed hallucinations to issues with training data, inadequate prompting, or the model's inability to understand or verify information. These findings illuminate vulnerabilities in AI-supported learning and highlight the need for explicit instruction in verification protocols, accurate mental models of generative AI, and awareness of behaviors such as sycophancy and confident delivery that obscure inaccuracy. The study contributes empirical evidence for integrating hallucination awareness and mitigation into AI literacy curricula. 
+- category: 'random'
+  title: >-
+    Deterministic or probabilistic? The psychology of LLMs as random number generators
+  url: https://arxiv.org/abs/2502.19965
+  abstract: >-
+    Large Language Models (LLMs) have transformed text generation through inherently probabilistic context-aware mechanisms, mimicking human natural language. In this paper, we systematically investigate the performance of various LLMs when generating random numbers, considering diverse configurations such as different model architectures, numerical ranges, temperature, and prompt languages. Our results reveal that, despite their stochastic transformers-based architecture, these models often exhibit deterministic responses when prompted for random numerical outputs. In particular, we find significant differences when changing the model, as well as the prompt language, attributing this phenomenon to biases deeply embedded within the training data. Models such as DeepSeek-R1 can shed some light on the internal reasoning process of LLMs, despite arriving to similar results. These biases induce predictable patterns that undermine genuine randomness, as LLMs are nothing but reproducing our own human cognitive biases. 
+- category: 'random'
+  title: >-
+    Vibe Password Generation: Predictable by Design
+  url: https://www.irregular.com/publications/vibe-password-generation
+  abstract: >-
+    LLM-generated passwords (generated directly by the LLM, rather than by an agent using a tool) appear strong, but are fundamentally insecure, because LLMs are designed to predict tokens – the opposite of securely and uniformly sampling random characters. Despite this, LLM-generated passwords appear in the real world – used by real users, and invisibly chosen by coding agents as part of code development tasks, instead of relying on traditional secure password generation methods. We’ve tested state-of-the-art models and agents, and analyzed the strength of the passwords they generate. Our results include predictable patterns in password characters, repeated passwords, and passwords that are much weaker than they seem, as described in detail in this publication. We recommend that users avoid using passwords generated by LLMs, that developers direct coding agents to use secure password generation methods when needed, and that AI labs train their models and direct their coding agents to prefer secure password generation out of the box.
 
 # - category: ''
 #   title: >- 
@@ -1394,6 +1435,7 @@
 # - moral
 # - performance
 # - plan
+# - random
 # - reality
 # - reasoning
 # - research

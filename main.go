@@ -37,7 +37,7 @@ func main() {
 		log.Fatalf("error: %v", err)
 	}
 	for i := range articles {
-		articles[i].Id = int64(i)
+		articles[i].Id = int64(i + 1)
 	}
 
 	funcMap := template.FuncMap{
