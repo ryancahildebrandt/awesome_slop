@@ -2,6 +2,6 @@ Makefile
 Justfile
 .venv
 clusters.csv
-main.py
+*.py
 pyproject.toml
 uv.lock
