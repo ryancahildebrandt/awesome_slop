@@ -22,7 +22,7 @@ Roughly grouped by study findings as they relate to common LLM claims
 - LLMs are biased
 	- LLMs are biased towards their own outputs [[84](#84), [151](#151), [221](#221)]
 	- LLMs propagate social bias [[57](#57), [58](#58), [64](#64), [72](#72), [76](#76), [83](#83), [85](#85), [87](#87), [111](#111), [117](#117), [121](#121), [126](#126), [141](#141), [153](#153), [159](#159), [160](#160), [173](#173), [206](#206), [211](#211), [214](#214), [246](#246), [282](#282), [286](#286)]
-	- LLMs outputs are sycophantic [[248](#248)]
+	- LLMs outputs are sycophantic [[181](#181), [219](#219), [248](#248)]
 - LLM evaluations are unreliable
 	- Benchmarks aren't enough [[33](#33), [51](#51), [66](#66), [119](#119), [149](#149), [161](#161), [190](#190), [223](#223), [224](#224), [296](#296)]
 	- Hallucination detection is unreliable [[62](#62), [68](#68), [108](#108), [158](#158), [201](#201), [204](#204), [213](#213), [250](#250), [251](#251), [257](#257), [260](#260), [265](#265), [290](#290)]
@@ -37,7 +37,7 @@ Roughly grouped by study findings as they relate to common LLM claims
 - LLMs cause harm
 	- LLMs violate ethical standards [[56](#56), [139](#139), [222](#222), [293](#293)]
 	- LLM safeguards are unreliable [[115](#115)]
-	- LLMs fail to mitigate harmful user interactions [[170](#170), [181](#181), [187](#187), [202](#202), [207](#207), [209](#209), [219](#219), [239](#239), [263](#263), [278](#278)]
+	- LLMs fail to mitigate harmful user interactions [[170](#170), [187](#187), [202](#202), [207](#207), [209](#209), [239](#239), [263](#263), [278](#278)]
 	- LLMs fail to mitigate harmful outputs [[52](#52), [65](#65), [79](#79), [125](#125), [157](#157), [165](#165), [174](#174), [249](#249), [271](#271), [273](#273), [292](#292)]
 	- LLMs are bad for the environment [[198](#198), [227](#227), [228](#228), [229](#229), [230](#230), [231](#231), [232](#232), [233](#233)]
 	- LLMs are bad for you [[81](#81), [234](#234), [235](#235), [236](#236), [243](#243)]
