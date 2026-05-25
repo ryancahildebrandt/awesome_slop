@@ -10,6 +10,8 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"regexp"
+	"slices"
 	"strings"
 	"text/template"
 
@@ -25,8 +27,47 @@ type Article struct {
 }
 
 func main() {
-	var articles []Article
-	var err error
+	var (
+		articles   []Article
+		categories []string
+		count      int
+		err        error
+	)
+
+	f, err := os.Open("./templates/directory.md.tmpl")
+	if err != nil {
+		log.Fatalf("error: %v", err)
+	}
+	defer f.Close()
+
+	scanner := bufio.NewScanner(f)
+	for scanner.Scan() {
+		line := scanner.Text()
+		res := regexp.MustCompile(`{{ categoryReferences "(.*)" }}`).FindStringSubmatch(line)
+		if len(res) == 0 {
+			continue
+		}
+		categories = append(categories, res[1])
+	}
+	f, err = os.Open("./templates/reviews.md.tmpl")
+	if err != nil {
+		log.Fatalf("error: %v", err)
+	}
+	defer f.Close()
+
+	scanner = bufio.NewScanner(f)
+	for scanner.Scan() {
+		line := scanner.Text()
+		res := regexp.MustCompile(`{{ categoryReferences "(.*)" }}`).FindStringSubmatch(line)
+		if len(res) == 0 {
+			continue
+		}
+		categories = append(categories, res[1])
+	}
+
+	if scanner.Err() != nil {
+		log.Fatalf("error: %v", scanner.Err())
+	}
 
 	b, err := os.ReadFile("./articles.yaml")
 	if err != nil {
@@ -38,6 +79,9 @@ func main() {
 	}
 	for i := range articles {
 		articles[i].Id = int64(i + 1)
+		if !slices.Contains(categories, articles[i].Category) {
+			log.Printf("category %s not found in directory", articles[i].Category)
+		}
 	}
 
 	funcMap := template.FuncMap{
@@ -46,6 +90,7 @@ func main() {
 			for _, a := range articles {
 				if a.Category == v {
 					refs = append(refs, fmt.Sprintf("[%v](#%v)", a.Id, a.Id))
+					count++
 				}
 			}
 			return fmt.Sprint("[", strings.Join(refs, ", "), "]")
@@ -68,4 +113,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("error: %v", err)
 	}
+
+	log.Printf("successfully built with %v/%v articles", count, len(articles))
 }
