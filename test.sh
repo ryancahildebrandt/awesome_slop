@@ -1,0 +1,6 @@
+curl -sS -X POST https://scholar-sidekick.com/api/retraction-check -H "Content-Type: application/json" -d '{"id":"2310.07298"}'
+curl -sS -X POST https://scholar-sidekick.com/api/retraction-check -H "Content-Type: application/json" -d '{"id":"2308.13067"}'
+curl -sS -X POST https://scholar-sidekick.com/api/retraction-check -H "Content-Type: application/json" -d '{"id":"2412.04503"}'
+curl -sS -X POST https://scholar-sidekick.com/api/retraction-check -H "Content-Type: application/json" -d '{"id":"2404.04631"}'
+curl -sS -X POST https://scholar-sidekick.com/api/retraction-check -H "Content-Type: application/json" -d '{"id":"2505.08140"}'
+curl -sS -X POST https://scholar-sidekick.com/api/retraction-check -H "Content-Type: application/json" -d '{"id":"2402.08939"}'
